@@ -1,0 +1,126 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  transition: background 1s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+}
+
+/* Input and Button */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  outline: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff7b54;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff5200;
+  transform: scale(1.1);
+}
+
+/* Weather Info */
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.weather-info p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* Weather Animations */
+.sunny {
+  background: linear-gradient(to bottom, #fceabb, #f8b500);
+}
+
+.rainy {
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  animation: rain 0.5s infinite linear;
+}
+
+.cloudy {
+  background: linear-gradient(to bottom, #bdc3c7, #2c3e50);
+}
+
+.stormy {
+  background: linear-gradient(to bottom, #2c3e50, #34495e);
+  animation: storm 1.5s infinite;
+}
+
+.windy {
+  background: linear-gradient(to bottom, #b8c6db, #f5f7fa);
+  animation: wind 3s infinite;
+}
+
+/* Rain Animation */
+@keyframes rain {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100px;
+  }
+}
+
+/* Storm Animation */
+@keyframes storm {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+}
+
+/* Wind Animation */
+@keyframes wind {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
